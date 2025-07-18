@@ -5,49 +5,116 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home | Netflix</title>
+    <title>Netflix Clone - Enhanced</title>
     <link rel="stylesheet" href="Netflix_clone-main/home_page.css"/>
-     <script src="Netflix_clone-main/script2.js"></script>
+    <script src="Netflix_clone-main/script2.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #000 0%, #111 100%);
+        color: white;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .welcome-container {
+        text-align: center;
+        max-width: 600px;
+        padding: 40px;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 12px;
+        box-shadow: 0 8px 32px rgba(229, 9, 20, 0.3);
+      }
+      .logo {
+        width: 200px;
+        margin-bottom: 30px;
+      }
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #e50914;
+      }
+      p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        color: #ccc;
+      }
+      .enter-btn {
+        background: #e50914;
+        color: white;
+        border: none;
+        padding: 15px 40px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .enter-btn:hover {
+        background: #f40612;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(229, 9, 20, 0.4);
+      }
+      .features {
+        margin-top: 40px;
+        text-align: left;
+      }
+      .feature {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+      }
+      .feature-icon {
+        width: 20px;
+        height: 20px;
+        background: #e50914;
+        border-radius: 50%;
+        margin-right: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+      }
+    </style>
   </head>
   <body>
-    <!-- navbar -->
-    <div class="nav">
-      <div class="nav__left">
-        <a href="index.html">
-        <img class="nav_logo" src="Netflix_clone-main/images/logo.png" alt=""></a>
+    <div class="welcome-container">
+      <img src="Netflix_clone-main/images/logo.png" alt="Netflix Logo" class="logo">
+      <h1>Enhanced Netflix Clone</h1>
+      <p>
+        Experience a fully functional Netflix homepage clone with enhanced features including 
+        search functionality, movie details modal, and responsive design.
+      </p>
+      
+      <div class="features">
+        <div class="feature">
+          <div class="feature-icon">🔍</div>
+          <span>Advanced Search Functionality</span>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🎬</div>
+          <span>Movie Details & Information</span>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">📱</div>
+          <span>Fully Responsive Design</span>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">⚡</div>
+          <span>Real-time Movie Data from TMDB</span>
+        </div>
       </div>
-      <div class="nav__right">
-        <img src="Netflix_clone-main/images/avatar.jpeg" class="nav_avatar" alt="">
-      </div>
+      
+      <a href="Netflix_clone-main/index.html" class="enter-btn">
+        Enter Netflix Clone
+      </a>
     </div>
-
-    <!-- banner -->
-    <header id="banner">
-      <div id="banner__contents">
-        <h1 id="banner__title"></h1>
-        <div id="banner__buttons">
-        <button id="banner__button">Play</button>
-        <button id="banner__button">My List</button>
-      </div>
-      <p id="banner__description"></p>
-      </div>
-      <div id="banner__fadeBottom"></div>
-    </header>
-
-    <!-- row -->
-    <div id="headrow">
-      <div class="row">
-        <h2 class="row__title"></h2>
-        <div class="row__posters"> </div>
-      </div>
-    </div>
-
-    <script>
-      window.addEventListener("scroll",function(){
-
-        var nav = document.querySelector(".nav");
-        nav.classList.toggle("active", window.scrollY > 0);
-      }) 
-    </script> 
   </body>
 </html>

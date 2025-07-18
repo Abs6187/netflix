@@ -14,10 +14,16 @@
     <div class="nav">
       <div class="nav__left">
         <a href="index.html">
-        <img class="nav_logo" src="./images/logo.png" alt=""></a>
+        <img class="nav_logo" src="./images/logo.png" alt="Netflix Logo"></a>
+      </div>
+      <div class="nav__center">
+        <div class="search-container">
+          <input type="text" id="searchInput" placeholder="Search movies, TV shows..." class="search-input">
+          <button id="searchBtn" class="search-btn">🔍</button>
+        </div>
       </div>
       <div class="nav__right">
-        <img src="./images/avatar.jpeg" class="nav_avatar" alt="">
+        <img src="./images/avatar.jpeg" class="nav_avatar" alt="User Avatar">
       </div>
     </div>
 
@@ -39,6 +45,22 @@
       <div class="row">
         <h2 class="row__title"></h2>
         <div class="row__posters"> </div>
+      </div>
+    </div>
+
+    <!-- Search Results Section -->
+    <div id="searchResults" class="search-results" style="display: none;">
+      <div class="row">
+        <h2 class="row__title">Search Results</h2>
+        <div class="row__posters" id="searchResultsContainer"></div>
+      </div>
+    </div>
+
+    <!-- Movie Details Modal -->
+    <div id="movieModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modalBody"></div>
       </div>
     </div>
 
